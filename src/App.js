@@ -1,6 +1,6 @@
 import './App.css';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function GoalForm(props) {
   const [formData, setFormData] = useState({ goal: '', by: '' });
@@ -56,15 +56,29 @@ function ListOfGoals(props) {
 
 function App() {
   const [allGoals, updateAllGoals] = useState([]);
+  const [toggle, setToggle] = useState(false);
+
+  const clickHandler = () => {
+    setToggle(!toggle);
+  };
 
   function addGoal(goal) {
     updateAllGoals([...allGoals, goal]);
   }
 
+  useEffect(() => {
+    document.title = toggle ? 'Welcome to lillemon' : 'useEffect hook';
+  }, [toggle]);
+
   return (
     <>
       <GoalForm onAdd={addGoal} />
       <ListOfGoals allGoals={allGoals} />
+      <>
+        <h2>useEffect hook</h2>
+        <button onClick={clickHandler}>Toggle message</button>
+        {toggle && <h3>Welcome to lillemon</h3>}
+      </>
     </>
   );
 }
