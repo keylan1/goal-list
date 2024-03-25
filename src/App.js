@@ -77,7 +77,7 @@ function App() {
       <>
         <h2>useEffect hook</h2>
         <button onClick={clickHandler}>Toggle message</button>
-        {toggle && <h3>Welcome to lillemon</h3>}
+        {toggle && <h3>Welcome to lil lemon</h3>}
       </>
     </>
   );
