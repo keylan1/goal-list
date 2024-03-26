@@ -68,7 +68,7 @@ function App() {
   }
 
   useEffect(() => {
-    document.title = toggle ? 'Welcome to lillemon' : 'useEffect hook';
+    document.title = toggle ? 'Welcome to your goal list' : 'useEffect hook';
   }, [toggle]);
 
   return (
@@ -77,9 +77,9 @@ function App() {
       <GoalForm onAdd={addGoal} />
       <ListOfGoals allGoals={allGoals} />
       <>
-        <h2>useEffect hook</h2>
+        <h3>Testing useEffect hook</h3>
         <button onClick={clickHandler}>Toggle message</button>
-        {toggle && <h3>Welcome to lil lemon</h3>}
+        {toggle && <h3>Welcome to your goal list</h3>}
       </>
     </>
   );

@@ -15,12 +15,12 @@ function FetchUser() {
 
   return Object.keys(user).length > 0 ? (
     <div>
-      <h1>Data returned</h1>
-      <h2>First name: {user.results[0].name.first}</h2>
-      <h2>Last name: {user.results[0].name.last}</h2>
+      <h2>Data returned</h2>
+      <h3>First name: {user.results[0].name.first}</h3>
+      <h3>Last name: {user.results[0].name.last}</h3>
     </div>
   ) : (
-    <h1>Data pending</h1>
+    <h2>Data pending</h2>
   );
 }
 
