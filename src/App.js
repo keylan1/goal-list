@@ -1,4 +1,5 @@
 import './App.css';
+import FetchUser from './components/FetchUser';
 
 import { useState, useEffect } from 'react';
 
@@ -72,6 +73,7 @@ function App() {
 
   return (
     <>
+      <FetchUser />
       <GoalForm onAdd={addGoal} />
       <ListOfGoals allGoals={allGoals} />
       <>
